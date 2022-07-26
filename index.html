@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convention Bootstrap</title>
+    <style>
+      .carousel-item img {
+        height: 600px !important;
+        object-fit: cover;
+      }
+      .card-container,
+      .row-container {
+        margin: 3.5rem 0;
+      }
+
+      .bg-image {
+        background-image: url("./icons/watermark.svg");
+        background-size: 100%;
+        background-position-x: -116%;
+      }
+      .trans-top {
+        transform: translateY(0);
+      }
+
+      .pos-custom {
+        right: 10px;
+        top: -7px;
+      }
+
+      .shadow-primary {
+        box-shadow: 0 25px 20px 8px rgba(0, 0, 0, 0.08);
+      }
+
+      footer img {
+        width: 150px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        .card-container,
+        .row-container {
+          margin: 6.5rem 0;
+        }
+
+        .trans-top {
+          transform: translateY(-56px);
+        }
+      }
+
+      @media only screen and (max-width: 991px) {
+        .min-full {
+          min-width: 100%;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css" />
+  </head>
+  <body>
+    <!-- NavBar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container d-flex justify-content-between">
+        <a class="fw-bold navbar-brand" href="#">Abacus Convention Center</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse flex-grow-0"
+          id="navbarNavAltMarkup"
+        >
+          <div class="navbar-nav fw-bolder">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#">Subscribe</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Header -->
+    <section class="section-header">
+      <!-- Carousel -->
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/banner.png" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-md-block w-50 mx-auto">
+              <h1>The perfect venue for your next event</h1>
+              <p class="text-white-50">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Exercitationem repellat eos dolorem explicabo. Veniam, totam.
+              </p>
+              <button class="btn text-primary bg-white fw-bold px-5 mb-3">
+                Book Now
+              </button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/people.png" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-md-block">
+              <h5>Second slide label</h5>
+              <p>
+                Some representative placeholder content for the second slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/wedding.png" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-md-block">
+              <h5>Third slide label</h5>
+              <p>
+                Some representative placeholder content for the third slide.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Section Precious -->
+
+    <section class="section-precious container my-5">
+      <div class="row-container">
+        <div class="row gx-3">
+          <div class="col-lg-6 col-12">
+            <img src="./images/wedding.png" alt="" class="img-fluid min-full" />
+          </div>
+          <div
+            class="col-lg-6 col-12 d-flex flex-column align-items-start justify-content-center"
+          >
+            <h2 class="fw-bolder">Every moment is Precious</h2>
+            <p class="my-4 fw-bold">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+              magni unde commodi omnis? Unde voluptate veniam ex similique illo
+              adipisci?
+            </p>
+
+            <button
+              type="button"
+              id="liveToastBtn"
+              class="btn btn-primary text-white rounded-0 position-relative pe-5"
+            >
+              Explore our album
+              <span class="position-absolute top-50 end-0 translate-middle">
+                <img
+                  src="./icons/arrow-forward 1.svg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </span>
+            </button>
+
+            <!-- Toast -->
+
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+              <div
+                id="liveToast"
+                class="toast hide"
+                role="alert"
+                aria-live="assertive"
+                aria-atomic="true"
+              >
+                <div class="d-flex alig-items-center">
+                  <div class="toast-body">
+                    Hello, world! This is a toast message.
+                  </div>
+                  <button
+                    type="button"
+                    class="btn-close me-2 m-auto"
+                    data-bs-dismiss="toast"
+                    aria-label="Close"
+                  ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Package -->
+
+    <section class="section-package container my-5">
+      <h2 class="fw-bolder text-center">Our Package</h2>
+
+      <!-- Card -->
+
+      <div class="card-container">
+        <div
+          class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gy-3 g-lg-x-2"
+        >
+          <div class="col">
+            <div class="card border-0 px-1">
+              <div class="card-body">
+                <h3 class="card-title fw-bold">$300</h3>
+                <p class="h4 fw-bold card-text">Business Fair</p>
+                <p class="card-text text-secondary">
+                  For most businesses event like book fair, craft fair.
+                </p>
+                <ul
+                  class="list-container my-1"
+                  style="list-style: none; padding: 0"
+                >
+                  <li>
+                    <img
+                      src="./icons/check.svg"
+                      alt=""
+                      class="img-fluid bg-primary bg-opacity-10 rounded"
+                    />
+                    <span class="text-secondary">Limited space access</span>
+                  </li>
+                  <li>
+                    <img
+                      src="./icons/check.svg"
+                      alt=""
+                      class="img-fluid bg-primary bg-opacity-10 rounded"
+                    />
+                    <span class="text-secondary"> Security facility</span>
+                  </li>
+
+                  <li>
+                    <img
+                      src="./icons/check.svg"
+                      alt=""
+                      class="img-fluid bg-primary bg-opacity-10 rounded"
+                    />
+                    <span class="text-secondary">Event support</span>
+                  </li>
+                  <li>
+                    <img
+                      src="./icons/check.svg"
+                      alt=""
+                      class="img-fluid bg-primary bg-opacity-10 rounded"
+                    />
+                    <span class="text-secondary">Decoration design</span>
+                  </li>
+                  <li>
+                    <img
+                      src="./icons/check.svg"
+                      alt=""
+                      class="img-fluid bg-primary bg-opacity-10 rounded"
+                    />
+                    <span class="text-secondary">Per day bill</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer border-0 rounded-5 text-center">
+                <button
+                  class="text-primary border-0 fw-bold"
+                  style="background: none"
+                  ;
+                >
+                  Choose Plan
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card border-0 px-1">
+              <div class="card-body">
+                <h3 class="card-title fw-bold">$500</h3>
+                <p class="h4 fw-bold card-text">Wedding Basic</p>
+                <p class="card-text text-secondary">
+                  For weddings with basic plan and limited item
+                </p>
+                <ul
+                  class="list-container my-1"
+                  style="list-style: none; padding: 0"
+                >
+                  <li>
+                    <img
+                      src="./icons/check.svg"
+                      alt=""
+                      class="img-fluid bg-primary bg-opacity-10 rounded"
+                    />
+                    <span class="text-secondary">Full space access</span>
+                  </li>
+                  <li>
+                    <img
+                      src="./icons/check.svg"
+                      alt=""
+                      class="img-fluid bg-primary bg-opacity-10 rounded"
+                    />
+                    <span class="text-secondary"> Food arrangement</span>
+                  </li>
+
+                  <li>
+                    <img
+                      src="./icons/check.svg"
+                      alt=""
+                      class="img-fluid bg-primary bg-opacity-10 rounded"
+                    />
+                    <span class="text-secondary">Management support</span>
+                  </li>
+                  <li>
+                    <img
+                      src="./icons/check.svg"
+                      alt=""
+                      class="img-fluid bg-primary bg-opacity-10 rounded"
+                    />
+                    <span class="text-secondary">Decoration design</span>
+                  </li>
+                  <li>
+                    <img
+                      src="./icons/check.svg"
+                      alt=""
+                      class="img-fluid bg-primary bg-opacity-10 rounded"
+                    />
+                    <span class="text-secondary">Billed as shift</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer border-0 rounded-5 text-center">
+                <button
+                  class="text-primary border-0 fw-bold"
+                  style="background: none"
+                  ;
+                >
+                  Choose Plan
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col trans-top">
+            <div
+              class="card bg-image border-0 bg-primary text-white py-3 px-3 rounded-5 shadow-primary position-relative"
+            >
+              <span
+                class="position-absolute pos-custom badge rounded-pill bg-danger"
+              >
+                Hot
+              </span>
+              <div class="card-body">
+                <h3 class="card-title fw-bold">$800</h3>
+                <p class="h4 fw-bold card-text">Wedding Plus</p>
+                <p class="card-text">For most wedding with premium plans</p>
+                <ul
+                  class="list-container my-1"
+                  style="list-style: none; padding: 0"
+                >
+                  <li>
+                    <img
+                      src="./icons/check-white.svg"
+                      alt=""
+                      class="img-fluid bg-white bg-opacity-10 rounded"
+                    />
+                    <span>Full space access</span>
+                  </li>
+                  <li>
+                    <img
+                      src="./icons/check-white.svg"
+                      alt=""
+                      class="img-fluid bg-white bg-opacity-10 rounded"
+                    />
+                    <span>Dedicated team</span>
+                  </li>
+
+                  <li>
+                    <img
+                      src="./icons/check-white.svg"
+                      alt=""
+                      class="img-fluid bg-white bg-opacity-10 rounded"
+                    />
+                    <span>Buffet food</span>
+                  </li>
+                  <li>
+                    <img
+                      src="./icons/check-white.svg"
+                      alt=""
+                      class="img-fluid bg-white bg-opacity-10 rounded"
+                    />
+                    <span>Premium Decoration</span>
+                  </li>
+                  <li>
+                    <img
+                      src="./icons/check-white.svg"
+                      alt=""
+                      class="img-fluid bg-white bg-opacity-10 rounded"
+                    />
+                    <span>Pay As Plan</span>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="card-footer mb-4 border-0 rounded-5 text-center bg-light shadow-lg"
+              >
+                <button
+                  class="text-primary border-0 fw-bold"
+                  style="background: none"
+                  ;
+                >
+                  Choose Plan
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card border-0 px-1">
+              <div class="card-body">
+                <h3 class="card-title fw-bold">$1200</h3>
+                <p class="h4 fw-bold card-text">Corporate Event</p>
+                <p class="card-text text-secondary">
+                  For most corporate business events
+                </p>
+                <ul
+                  class="list-container my-1"
+                  style="list-style: none; padding: 0"
+                >
+                  <li>
+                    <img
+                      src="./icons/check.svg"
+                      alt=""
+                      class="img-fluid bg-primary bg-opacity-10 rounded"
+                    />
+                    <span class="text-secondary">Full space access</span>
+                  </li>
+                  <li>
+                    <img
+                      src="./icons/check.svg"
+                      alt=""
+                      class="img-fluid bg-primary bg-opacity-10 rounded"
+                    />
+                    <span class="text-secondary">Dedicated team</span>
+                  </li>
+
+                  <li>
+                    <img
+                      src="./icons/check.svg"
+                      alt=""
+                      class="img-fluid bg-primary bg-opacity-10 rounded"
+                    />
+                    <span class="text-secondary">Buffet food</span>
+                  </li>
+                  <li>
+                    <img
+                      src="./icons/check.svg"
+                      alt=""
+                      class="img-fluid bg-primary bg-opacity-10 rounded"
+                    />
+                    <span class="text-secondary">Premium Decoration</span>
+                  </li>
+                  <li>
+                    <img
+                      src="./icons/check.svg"
+                      alt=""
+                      class="img-fluid bg-primary bg-opacity-10 rounded"
+                    />
+                    <span class="text-secondary">Pay As Plan</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer border-0 rounded-5 text-center">
+                <button
+                  class="text-primary border-0 fw-bold"
+                  style="background: none"
+                  ;
+                >
+                  Choose Plan
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Client -->
+
+    <section class="section-client container">
+      <h2 class="text-center fw-bold">Happy Client Says</h2>
+      <div class="row-container">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 col-12 text-center">
+            <div class="shadow-lg px-5 py-4 rounded">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+                rerum, at nesciunt quibusdam quam animi.
+              </p>
+
+              <img
+                class="rounded-circle img-fluid"
+                src="./images/person 1.png"
+                alt=""
+              />
+              <h5 class="fw-bold">Jone Drake</h5>
+              <h5 class="text-muted">Banker</h5>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 col-12 text-center">
+            <div class="shadow-lg px-5 py-4 rounded">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+                rerum, at nesciunt quibusdam quam animi.
+              </p>
+
+              <img
+                class="rounded-circle img-fluid"
+                src="./images/person 2.png"
+                alt=""
+              />
+              <h5 class="fw-bold">Regina Miles</h5>
+              <h5 class="text-muted">Banker</h5>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 col-12 text-center">
+            <div class="px-5 py-4 shadow-lg rounded">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+                rerum, at nesciunt quibusdam quam animi.
+              </p>
+
+              <img
+                class="rounded-circle img-fluid"
+                src="./images/person 3.png"
+                alt=""
+              />
+              <h5 class="fw-bold">Cret Yater</h5>
+              <h5 class="text-muted">Banker</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Faq -->
+
+    <section class="section-faq container">
+      <h2 class="text-center fw-bold">Frequently Asked Questions</h2>
+      <div class="row-container">
+        <div class="row gx-4 gy-5">
+          <div class="col-12 col-lg-6">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item border border-1 my-2">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button
+                    class="h3 text-dark bg-white accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    What's the difference between event design and event
+                    planning?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Event design and event planning work hand in hand to deliver
+                    a successful event.Events by Knight offer tailor made
+                    events. This means we incorporate both event design and
+                    event planning to create that perfect event
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border border-1 my-2">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button
+                    class="h3 text-dark bg-white accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    How early do we need to start planning an event
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Alias reprehenderit hic veniam cupiditate dignissimos, quae
+                    commodi aperiam placeat asperiores rem quo accusamus
+                    voluptas quos quas ut repellat ex maiores illum quod iusto
+                    nostrum id voluptate!
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border border-1 my-2">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button
+                    class="h3 text-dark bg-white accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    What is your refund and cancellation policy?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingThree"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Omnis minima dolores quis enim iste natus, dignissimos,
+                    blanditiis vitae assumenda vel eos. Ab vero, illo debitis
+                    blanditiis nam odio hic, minus cumque quis, neque mollitia
+                    laborum laboriosam quas possimus.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border border-1 my-2">
+                <h2 class="accordion-header" id="flush-headingFour">
+                  <button
+                    class="h3 text-dark bg-white accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                  >
+                    How do you keep budget on track?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingFour"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Omnis minima dolores quis enim iste natus, dignissimos,
+                    blanditiis vitae assumenda vel eos. Ab vero, illo debitis
+                    blanditiis nam odio hic, minus cumque quis, neque mollitia
+                    laborum laboriosam quas possimus.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <img src="./images/people.png" alt="" class="img-fluid min-full" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white">
+      <div class="container py-5">
+        <div class="row gy-5">
+          <div class="col-12 col-lg-6">
+            <div
+              class="d-flex align-items-lg-center justify-content-lg-start justify-content-center h-100"
+            >
+              <p class="mb-0">
+                Copyright &copy 2023 by Abacus. All rights reserved.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div
+              class="d-flex flex-column align-items-center align-items-lg-end"
+            >
+              <h3 class="mb-5">Get The App</h3>
+              <img class="mb-3" src="./images/apple.png" alt="" />
+              <img src="./images/google.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./bootstrap/bootstrap.min.js"></script>
+  </body>
+</html>
